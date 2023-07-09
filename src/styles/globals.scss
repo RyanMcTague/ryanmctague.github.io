@@ -1,1 +1,76 @@
-@import "bulma/bulma";
+
+@import 'modern-normalize/modern-normalize.css';
+@import "@fontsource/open-sans";
+
+$color-primary-0: #2B7E7E;	// Main Primary color */
+$color-primary-1: #76B8B8;
+$color-primary-2: #459393;
+$color-primary-3: #176C6C;
+$color-primary-4: #085656;
+
+$color-secondary-1-0: #424093;	// Main Secondary color (1) */
+$color-secondary-1-1: #8D8CCA;
+$color-secondary-1-2: #5F5EAB;
+$color-secondary-1-3: #2B2A7E;
+$color-secondary-1-4: #181664;
+
+$color-secondary-2-0: #7ABD3F;	// Main Secondary color (2) */
+$color-secondary-2-1: #BFEC97;
+$color-secondary-2-2: #9EDB67;
+$color-secondary-2-3: #5EA222;
+$color-secondary-2-4: #42800B;
+
+
+$color-gray-0: #FDFDFD;
+$color-gray-1: #EDEDED;
+$color-gray-2: #DDDDDD;
+$color-gray-3: #9A9A9A;
+$color-gray-4: #333333;
+
+
+$colors:(
+  "primary":(
+    "0": $color-primary-0,
+    "1": $color-primary-1,
+    "2": $color-primary-2,
+    "3": $color-primary-3,
+    "4": $color-primary-4,
+  ),
+  "secondary":(
+    "0": $color-secondary-1-0,
+    "1": $color-secondary-1-1,
+    "2": $color-secondary-1-2,
+    "3": $color-secondary-1-3,
+    "4": $color-secondary-1-4,
+  ),
+  "secondary-alt":(
+    "0": $color-secondary-2-0,
+    "1": $color-secondary-2-1,
+    "2": $color-secondary-2-2,
+    "3": $color-secondary-2-3,
+    "4": $color-secondary-2-4,
+  ),
+  "gray":(
+    "0": $color-gray-0,
+    "1": $color-gray-1,
+    "2": $color-gray-2,
+    "3": $color-gray-3,
+    "4": $color-gray-4,
+  )
+);
+
+body{
+  font-family: "Open Sans";
+}
+
+@each $name, $color-map in $colors{
+  @each $level, $color in $color-map{
+    .bg-#{$name}-#{$level}{
+      background-color: $color;
+    }
+
+    .txt-#{$name}-#{$level}{
+      color: $color;
+    }
+  }
+}

@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.8.0",
-    "bulma": "^0.9.4",
+    "@fontsource/open-sans": "^5.0.5",
+    "astro": "^2.6.5",
+    "modern-normalize": "^2.0.0",
     "sass": "^1.63.6"
   },
   "devDependencies": {
