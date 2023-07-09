@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.19.7",
     "astro": "^2.8.0",
-    "bulma": "^0.9.4"
+    "bulma": "^0.9.4",
+    "sass": "^1.63.6"
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.1"
