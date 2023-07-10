@@ -1,0 +1,23 @@
+---
+interface Props{
+  title: string
+  experience: string
+}
+const { title, experience } = Astro.props
+---
+<div class="column">
+  <div class="card">
+    <div class="card-content">
+      <p class="title">
+      {title}
+      </p>
+      <p class="subtitle">
+        Experience: {experience}
+      </p>
+      <div class="content">
+        <slot/>
+      </div>
+    </div>
+  </div>
+</div>
+  
